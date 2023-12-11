@@ -29,20 +29,20 @@ export const Client = ({ name }: ClientProps) => {
         placeholder="Select Client"
         options={[
           {
-            label: "Testing Center 1",
-            value: "Testing Center 1",
+            label: "Client 1",
+            value: "Client 1",
           },
           {
-            label: "Testing Center 2",
-            value: "Testing Center 2",
+            label: "Client 2",
+            value: "Client 2",
           },
           {
-            label: "Testing Center 3",
-            value: "Testing Center 3",
+            label: "Client 3",
+            value: "Client 3",
           },
           {
-            label: "Testing Center 4",
-            value: "Testing Center 4",
+            label: "Client 4",
+            value: "Client 4",
           },
         ]}
         onChange={(e) => {

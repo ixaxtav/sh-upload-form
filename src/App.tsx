@@ -7,6 +7,8 @@ import { Column } from "./layouts/Column";
 
 function App() {
   const [isOpen, setIsOpen] = useState(true);
+  const [splitSchedule, setSplitSchedule] = useState("Yes");
+  const [client, setClient] = useState("Multiple");
 
   return (
     <CenterContainer>
@@ -64,7 +66,7 @@ function App() {
           </Column>
           <Column>
             <Text bold>Split schedule using social distancing?</Text>
-            <RadioButtonGroup name="social-distancing" options={["Yes", "No"]} onChange={(e) => console.log(e.target.value)} />
+            <RadioButtonGroup name="social-distancing" options={["Yes", "No"]} value={splitSchedule} onChange={(e) => setSplitSchedule(e.target.value)} />
             <Divider />
             <Text bold>Location Checking:</Text>
             <Text bold color="#59b340">
@@ -72,7 +74,7 @@ function App() {
             </Text>
             <Divider />
             <Text bold>Client:</Text>
-            <RadioButtonGroup name="client" options={["Single", "Multiple"]} onChange={(e) => console.log(e.target.value)} />
+            <RadioButtonGroup name="client" options={["Single", "Multiple"]} value={client} onChange={(e) => setClient(e.target.value)} />
             {[
               {
                 label: "Testing Center 1",

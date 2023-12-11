@@ -45,7 +45,7 @@ const Slider = styled.span<{ checked: boolean }>`
 `;
 
 export const Switch = () => {
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(true);
 
   const handleChange = () => setChecked(!checked);
 

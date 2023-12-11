@@ -47,15 +47,16 @@ const RadioCustom = styled.span`
 type RadioButtonGroupProps = {
   options: Array<string>;
   name: string;
+  value?: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export const RadioButtonGroup = ({ options, name, onChange }: RadioButtonGroupProps) => {
+export const RadioButtonGroup = ({ options, name, value, onChange }: RadioButtonGroupProps) => {
   return (
     <RadioGroup>
       {options.map((option, index) => (
         <RadioLabel key={index}>
-          <CustomRadio name={name} value={option} id={`option-${index}`} onChange={onChange} />
+          <CustomRadio name={name} value={option} checked={option === value} id={`option-${index}`} onChange={onChange} />
           <RadioCustom />
           {option}
         </RadioLabel>
