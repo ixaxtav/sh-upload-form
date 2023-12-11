@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Modal, Button, Heading } from "./components";
+import { Modal, Button, Heading, Select } from "./components";
 import { MdClose } from "react-icons/md";
 import { CenterContainer } from "./layouts/CenterContainer";
 import { Row } from "./layouts/Row";
@@ -17,7 +17,33 @@ function App() {
         </Button>
         <Heading>Document Upload</Heading>
         <Row>
-          <Column>Column 1</Column>
+          <Column>
+            <Select
+              placeholder="Select Import Name:"
+              options={[
+                {
+                  label: "Testing Name 1",
+                  value: "Testing Name 1",
+                },
+                {
+                  label: "Testing Name 2",
+                  value: "Testing Name 2",
+                },
+                {
+                  label: "Testing Name 3",
+                  value: "Testing Name 3",
+                },
+                {
+                  label: "Testing Name 4",
+                  value: "Testing Name 4",
+                },
+              ]}
+              bold
+              onChange={(e) => {
+                console.log(e.target.value);
+              }}
+            />
+          </Column>
           <Column>Column 2</Column>
         </Row>
       </Modal>
