@@ -5,3 +5,5 @@ export * from "./Select";
 export * from "./Divider";
 export * from "./Text";
 export * from "./FileUpload";
+export * from "./Switch";
+export * from "./Circle";

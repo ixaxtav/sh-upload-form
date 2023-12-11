@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Modal, Button, Heading, Select, Divider, Text, FileUpload } from "./components";
+import { Modal, Button, Heading, Select, Divider, Text, FileUpload, Switch, Circle } from "./components";
 import { MdClose } from "react-icons/md";
 import { CenterContainer } from "./layouts/CenterContainer";
 import { Row } from "./layouts/Row";
@@ -53,6 +53,14 @@ function App() {
             </Text>
             <Divider />
             <Text bold>Tolerance Window:</Text>
+            <div style={{ display: "flex", gap: "15px", alignItems: "center" }}>
+              <Switch />
+              <div style={{ width: "1px", height: "20px", backgroundColor: "#19075d" }} />
+              <div style={{ display: "inline-flex", alignItems: "center", gap: "10px" }}>
+                <Circle />
+                <span>Select Tolerance Level</span>
+              </div>
+            </div>
           </Column>
           <Column>
             <Text bold>Split schedule using social distancing?</Text>
