@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Modal, Button, Heading, Select, Divider, Text, FileUpload, Switch, Circle } from "./components";
+import { Modal, Button, Heading, Select, Divider, Text, FileUpload, Switch, Circle, RadioButtonGroup } from "./components";
 import { MdClose } from "react-icons/md";
 import { CenterContainer } from "./layouts/CenterContainer";
 import { Row } from "./layouts/Row";
@@ -64,6 +64,7 @@ function App() {
           </Column>
           <Column>
             <Text bold>Split schedule using social distancing?</Text>
+            <RadioButtonGroup name="social-distancing" options={["Yes", "No"]} onChange={(e) => console.log(e.target.value)} />
             <Divider />
             <Text bold>Location Checking:</Text>
             <Text bold color="#59b340">
@@ -71,6 +72,7 @@ function App() {
             </Text>
             <Divider />
             <Text bold>Client:</Text>
+            <RadioButtonGroup name="client" options={["Single", "Multiple"]} onChange={(e) => console.log(e.target.value)} />
           </Column>
         </Row>
         <h3 style={{ textAlign: "center", marginTop: "35px", marginBottom: "25px" }}>Data in the import file is correct. Please press Continue to import.</h3>

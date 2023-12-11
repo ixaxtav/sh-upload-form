@@ -7,3 +7,4 @@ export * from "./Text";
 export * from "./FileUpload";
 export * from "./Switch";
 export * from "./Circle";
+export * from "./RadioButtonGroup";
