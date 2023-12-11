@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Modal, Button } from "./components";
+import { Modal, Button, Heading } from "./components";
 import { MdClose } from "react-icons/md";
 import { CenterContainer } from "./layouts/CenterContainer";
 
@@ -13,6 +13,7 @@ function App() {
         <Button onClick={() => setIsOpen(false)}>
           <MdClose />
         </Button>
+        <Heading>Document Upload</Heading>
       </Modal>
     </CenterContainer>
   );
