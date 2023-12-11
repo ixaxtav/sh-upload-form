@@ -1,13 +1,17 @@
 import { useState } from "react";
-import { Modal } from "./components";
+import { Modal, Button } from "./components";
+import { MdClose } from "react-icons/md";
 
 function App() {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div>
+      <Button onClick={() => setIsOpen(true)}>Document Upload</Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <p>Modal</p>
+        <Button onClick={() => setIsOpen(false)}>
+          <MdClose />
+        </Button>
       </Modal>
     </div>
   );
