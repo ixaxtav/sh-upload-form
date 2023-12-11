@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Modal, Button, Heading, Select, Divider, Text, FileUpload, Switch, Circle, RadioButtonGroup } from "./components";
+import { Modal, Button, Heading, Select, Divider, Text, FileUpload, Switch, Circle, RadioButtonGroup, Client } from "./components";
 import { MdClose } from "react-icons/md";
 import { CenterContainer } from "./layouts/CenterContainer";
 import { Row } from "./layouts/Row";
@@ -73,6 +73,26 @@ function App() {
             <Divider />
             <Text bold>Client:</Text>
             <RadioButtonGroup name="client" options={["Single", "Multiple"]} onChange={(e) => console.log(e.target.value)} />
+            {[
+              {
+                label: "Testing Center 1",
+                value: "Testing Center 1",
+              },
+              {
+                label: "Testing Center 2",
+                value: "Testing Center 2",
+              },
+              {
+                label: "Testing Center 3",
+                value: "Testing Center 3",
+              },
+              {
+                label: "Testing Center 4",
+                value: "Testing Center 4",
+              },
+            ].map((client) => (
+              <Client name={client.label} />
+            ))}
           </Column>
         </Row>
         <h3 style={{ textAlign: "center", marginTop: "35px", marginBottom: "25px" }}>Data in the import file is correct. Please press Continue to import.</h3>

@@ -8,3 +8,4 @@ export * from "./FileUpload";
 export * from "./Switch";
 export * from "./Circle";
 export * from "./RadioButtonGroup";
+export * from "./Client";
