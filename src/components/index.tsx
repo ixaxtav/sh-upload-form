@@ -4,3 +4,4 @@ export * from "./Heading";
 export * from "./Select";
 export * from "./Divider";
 export * from "./Text";
+export * from "./FileUpload";

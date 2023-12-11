@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Modal, Button, Heading, Select, Divider, Text } from "./components";
+import { Modal, Button, Heading, Select, Divider, Text, FileUpload } from "./components";
 import { MdClose } from "react-icons/md";
 import { CenterContainer } from "./layouts/CenterContainer";
 import { Row } from "./layouts/Row";
@@ -45,6 +45,7 @@ function App() {
             />
             <Divider />
             <Text bold>Select a manifest that you'd like to import</Text>
+            <FileUpload />
             <Divider />
             <Text bold>Elapse Data Checking:</Text>
             <Text bold color="#59b340">
